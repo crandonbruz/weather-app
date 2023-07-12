@@ -1,0 +1,100 @@
+:root {--primary: #5397F5;
+--secondary: #58C6FC;
+--tertiary: #5BDAE5;
+--light-dark: #776965;
+--dark: #38302e;
+--white: white;
+--border-radius: 0.3rem;
+}
+
+body {
+    font-family: 'Roboto Slab', sans-serif;
+    background-color: var(--light-dark);
+    color: var(--primary);
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 20px auto;
+    width: 94%;
+}
+
+.card {
+    margin: 0 0 20px 0;
+}
+
+.card-body {
+    padding: 2.5%
+}
+
+.flex-row {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.space-between {
+    justify-content: space-between;
+}
+
+.form-label,
+.form-input,
+.form-textarea {
+    display: block;
+}
+
+.button{
+    display: block;
+}
+
+.col-auto {
+    flex-grow: 1;
+  }
+  
+  .col-1 {
+    flex: 0 0 calc(100% * 1 / 12 - 2%);
+  }
+  
+  .col-2 {
+    flex: 0 0 calc(100% * 2 / 12 - 2%);
+  }
+  
+  .col-3 {
+    flex: 0 0 calc(100% * 3 / 12 - 2%);
+  }
+  
+  .col-4 {
+    flex: 0 0 calc(100% * 4 / 12 - 2%);
+  }
+  
+  .col-5 {
+    flex: 0 0 calc(100% * 5 / 12 - 2%);
+  }
+  
+  .col-6 {
+    flex: 0 0 calc(100% * 6 / 12 - 2%);
+  }
+  
+  .col-7 {
+    flex: 0 0 calc(100% * 7 / 12 - 2%);
+  }
+  
+  .col-8 {
+    flex: 0 0 calc(100% * 8 / 12 - 2%);
+  }
+  
+  .col-9 {
+    flex: 0 0 calc(100% * 9 / 12 - 2%);
+  }
+  
+  .col-10 {
+    flex: 0 0 calc(100% * 10 / 12 - 2%);
+  }
+  
+  .col-11 {
+    flex: 0 0 calc(100% * 11 / 12 - 2%);
+  }
+  
+  .col-12 {
+    flex: 0 0 100%;
+  }
