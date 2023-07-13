@@ -9,12 +9,14 @@
 
 header {
     text-align: center;
+    background-color: var(--primary);
+    padding: 40px;
 }
 
 body {
     font-family: 'Roboto Slab', sans-serif;
     background-color: var(--light-dark);
-    color: var(--primary);
+    color: var(--white);
     margin: 0;
     padding: 0;
 }
@@ -22,6 +24,7 @@ body {
 main {
     margin: 20px auto;
     width: 94%;
+    color: var(--primary);
 }
 
 
