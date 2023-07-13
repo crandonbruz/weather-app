@@ -19,10 +19,10 @@
       <h1>Weather</h1>
     </header>
     <main class="flex-row space-between">
-      <div class="col-12 col-mid-4">
+      <div class="col-2 col-sm-6 col-md-4 col-lg-2">
         <div class="card">
           <h3 class="card-header">Search for the City:</h3>
-          <form id="search-form" class="card-body">
+          <form id="weather-form" class="card-body">
             <input name="city" id="search" type="text" placeholder="Miami" />
             <button type="submit" class="button">Search</button>
           </form>
@@ -41,6 +41,9 @@
             <button data-cities="portland" class="button">Portland</button>
             <button data-cities="sanAntonio" class="button">San Antonio</button>
           </div>
+        </div>
+        <div class="col-12 col-md-8">
+            <div id="weather-container" class="forecast"><span id="weather-search-term"></span></div>
         </div>
       </div>
     </main>
