@@ -1,7 +1,7 @@
 :root {--primary: #5397F5;
 --secondary: #58C6FC;
 --tertiary: #5BDAE5;
---light-dark: #776965;
+--light-dark: #e8d6d0;
 --dark: #38302e;
 --white: white;
 --border-radius: 0.3rem;
@@ -9,14 +9,14 @@
 
 header {
     text-align: center;
-    background-color: var(--primary);
+    background-color: var(--secondary);
     padding: 40px;
 }
 
 body {
     font-family: 'Roboto Slab', sans-serif;
     background-color: var(--light-dark);
-    color: var(--white);
+    color: var(--dark);
     margin: 0;
     padding: 0;
 }
