@@ -5,11 +5,11 @@ In this application, the weather the user chooses will be displayed on the scree
 ## Instalization
 
 ## Usage
-
+[Click here to see the final product](https://crandonbruz.github.io/weather-app/)
 ## Credits
 
 ## License
-[Mit License]()
+[Mit License](https://choosealicense.com/licenses/mit/)
 
 
 

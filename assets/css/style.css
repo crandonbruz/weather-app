@@ -1,50 +1,50 @@
-:root {--primary: #5397F5;
---secondary: #58C6FC;
---tertiary: #5BDAE5;
---light-dark: #e8d6d0;
---dark: #38302e;
---white: white;
---border-radius: 0.3rem;
+:root {
+  --primary: #5397f5;
+  --secondary: #58c6fc;
+  --tertiary: #5bdae5;
+  --light-dark: #e8d6d0;
+  --dark: #38302e;
+  --white: white;
+  --border-radius: 0.3rem;
 }
 
 header {
-    text-align: center;
-    background-color: var(--secondary);
-    padding: 40px;
+  text-align: center;
+  background-color: var(--secondary);
+  padding: 40px;
 }
 
 body {
-    font-family: 'Roboto Slab', sans-serif;
-    background-color: var(--light-dark);
-    color: var(--dark);
-    margin: 0;
-    padding: 0;
+  font-family: "Roboto Slab", sans-serif;
+  background-color: var(--light-dark);
+  color: var(--dark);
+  margin: 0;
+  padding: 0;
 }
 
 main {
-    margin: 20px auto;
-    width: 94%;
-    color: var(--primary);
+  margin: 20px auto;
+  width: 94%;
+  color: var(--primary);
 }
 
 li {
-    list-style-type: none;
+  list-style-type: none;
 }
-
 
 .form-input,
 .form-textarea {
-    display: block;
+  display: block;
 }
 
-.button{
-    display: block;
+.button {
+  display: block;
 }
 
-.current-weather{
-    background-color: var(--white);
+.current-weather {
+  background-color: var(--white);
 }
 
-.forecast{
-    background-color: var(--white);
+.forecast {
+  background-color: var(--white);
 }

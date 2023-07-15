@@ -25,15 +25,22 @@
           <form id="weather-form" class="card-body">
             <input name="city" id="search" type="text" placeholder="Miami" />
             <button type="submit" class="button">Search</button>
+            <div>
+              <div class="saved-weather"></div>
+            </div>
           </form>
         </div>
-        <div>
-          <div id="history" class=""></div>
+        <div class="col-8 row d-flex flex-column">
+          <div id="weather-container" class="current-weather">
+            <h3 id="currentCity"></h3>
+            <h3 id="cityDate"></h3>
+            <p id="temperature"></p>
+            <p id="humidity"></p>
+            <p id="feelsLike"></p>
+          </div>
         </div>
-        <div class="col-12 col-md-8">
-            <div id="weather-container" class="current-weather"></div>
-        </div>
-        <div>
+        <div class="col mt-3">
+          <h3>5 Day Forecast:</h3>
           <div id="forecast-container" class="forecast"></div>
         </div>
       </div>
