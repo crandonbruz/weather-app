@@ -32,13 +32,25 @@ li {
   list-style-type: none;
 }
 
+#weather-form{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
 .form-input,
 .form-textarea {
   display: block;
 }
 
+#search{
+  width: 100%;
+}
+
 .button {
   display: block;
+  background-color: var(--primary);
+  width: 50%;
 }
 
 .current-weather {
@@ -47,4 +59,31 @@ li {
 
 .forecast {
   background-color: var(--white);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+
+}
+
+.left{
+  width: 20%;
+}
+.right{
+  width: 70%;
+  padding: 0px 30px;
+}
+
+.forecast-card{
+  border: 5px solid var(--primary);
+}
+
+#saved-weather{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#saved-weather button{
+  background-color: var(--primary);
+  width: 50%
 }

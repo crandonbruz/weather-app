@@ -5,6 +5,7 @@ var weatherContainer = $("#weather-container");
 var forecastContainer = $("#forecast-container");
 var historyContainer = $("#history");
 var apiKey = "8efed053aa2fc8f3ac8f50a776afdf36";
+var saveButton = $("#saved-weather");
 
 var formSubmit = function (event) {
   event.preventDefault();
@@ -14,6 +15,7 @@ var formSubmit = function (event) {
   if (search) {
     getSearchValue(search);
     getCurrentCity(search);
+    rendorSave(search);
 
     searchElement.val("");
   } else {
@@ -58,11 +60,12 @@ var getSearchValue = function (searchElement) {
 };
 
 var renderCurrentWeather = function (data) {
+  weatherContainer.html("");
   var cityH3 = $("<h3>");
   cityH3.text(data.name);
   weatherContainer.append(cityH3);
   var cityTemprature = $("<li>");
-  cityTemprature.text(data.main.temp);
+  cityTemprature.text("Temprature: " + data.main.temp);
   weatherContainer.append(cityTemprature);
   var feelsLikeCity = $("<li>");
   feelsLikeCity.text(data.main.feels_like);
@@ -76,6 +79,7 @@ var renderCurrentWeather = function (data) {
 };
 
 var renderForecast = function (data) {
+  forecastContainer.html("");
   var selectedData = [
     data.list[3],
     data.list[11],
@@ -85,11 +89,23 @@ var renderForecast = function (data) {
   ];
   for (let index = 0; index < selectedData.length; index++) {
     var cardContainer = $("<div>");
+    cardContainer.addClass("forecast-card");
     var date = $("<li>");
-    date.text(selectedData[index].dt_txt);
+    date.text("Date: " + selectedData[index].dt_txt);
     cardContainer.append(date);
     forecastContainer.append(cardContainer);
   }
 };
+
+var rendorSave = function (saveCity) {
+  var newButton = $("<button>");
+  newButton.text(saveCity);
+  newButton.on("click", function (event) {
+    var grabCityText = event.target.textContent
+    getSearchValue(grabCityText);
+    getCurrentCity(grabCityText);
+  })
+  saveButton.append(newButton);
+}
 
 weatherForm.on("submit", formSubmit);
