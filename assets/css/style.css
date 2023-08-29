@@ -10,14 +10,16 @@
 
 header {
   text-align: center;
-  background-color: var(--secondary);
-  padding: 40px;
+  background-image: url('../images/lightening.jpg');
+  padding: 100px;
 }
 
 body {
-  font-family: "Roboto Slab", sans-serif;
-  background-color: var(--light-dark);
-  color: var(--dark);
+  font-family: "Raleway", sans-serif;
+  background-image: url("../images/clearrain.webp");
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: var(--white);
   margin: 0;
   padding: 0;
 }
@@ -25,14 +27,20 @@ body {
 main {
   margin: 20px auto;
   width: 94%;
-  color: var(--primary);
+  color: bold var(--dark);
+}
+
+.card{
+  background-color: transparent;
+  border: 1px solid var(--white);
 }
 
 li {
   list-style-type: none;
+  font-size: xx-large;
 }
 
-#weather-form{
+#weather-form {
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -41,49 +49,73 @@ li {
 .form-input,
 .form-textarea {
   display: block;
+  background-color: transparent;
+}
+::placeholder{
+  color: var(--white);
+  opacity: 1;
+  font-weight: 400;
 }
 
-#search{
+#search {
   width: 100%;
+  background-color: transparent;
+  border: 1px solid var(--white);
 }
 
 .button {
   display: block;
-  background-color: var(--primary);
+  background-color: transparent;
+  color: var(--white);
+  border: solid 1px var(--white);
   width: 50%;
+}
+.button:hover{
+  background-color: gray;
 }
 
 .current-weather {
-  background-color: var(--white);
+  background-color: transparent;
 }
-
+.col{
+  margin-right: -200px;
+}
 .forecast {
-  background-color: var(--white);
+  background-color: transparent;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-
 }
 
-.left{
+.left {
   width: 20%;
 }
-.right{
+.right {
   width: 70%;
   padding: 0px 30px;
 }
 
-.forecast-card{
-  border: 5px solid var(--primary);
+.forecast-card {
+  border: 1px solid var(--white);
+  font-size: xx-large;
+  font-weight: bold;
+  text-align: center;
 }
 
-#saved-weather{
+#saved-weather {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-#saved-weather button{
-  background-color: var(--primary);
-  width: 50%
+#saved-weather button {
+  display: block;
+  background-color: transparent;
+  color: var(--white);
+  border: solid 1px var(--white);
+  width: 50%;
+}
+
+#saved-weather button:hover{
+  background-color: gray;
 }

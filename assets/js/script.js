@@ -62,20 +62,20 @@ var getSearchValue = function (searchElement) {
 var renderCurrentWeather = function (data) {
   weatherContainer.html("");
   var cityH3 = $("<h3>");
-  cityH3.text(data.name);
+  cityH3.text(data.name + " " + data.sys.country );
   weatherContainer.append(cityH3);
   var cityTemprature = $("<li>");
-  cityTemprature.text("Temprature: " + data.main.temp);
+  cityTemprature.text("Temprature: " + data.main.temp + " Degrees");
   weatherContainer.append(cityTemprature);
   var feelsLikeCity = $("<li>");
-  feelsLikeCity.text(data.main.feels_like);
+  feelsLikeCity.text("Feels Like: " + data.main.feels_like + " Degrees");
   weatherContainer.append(feelsLikeCity);
   var humidityList = $("<li>");
-  humidityList.text(data.main.humidity);
+  humidityList.text("Humidity: " + data.main.humidity + " %");
   weatherContainer.append(humidityList);
-  var cityWeather = $("<li>");
-  cityWeather.text(data.weather[Array(1)]);
-  weatherContainer.append(cityWeather);
+  var cityWind = $("<li>");
+  cityWind.text("Wind Speed: " + data.wind.speed + " MPH");
+  weatherContainer.append(cityWind);
 };
 
 var renderForecast = function (data) {
@@ -93,6 +93,18 @@ var renderForecast = function (data) {
     var date = $("<li>");
     date.text("Date: " + selectedData[index].dt_txt);
     cardContainer.append(date);
+    var temp = $("<li>");
+    temp.text("Temprature: " + selectedData[index].main.temp + " Degrees");
+    cardContainer.append(temp);
+    var feelsLike = $("<li>");
+    feelsLike.text("Feels Like: " + selectedData[index].main.feels_like + " Degrees");
+    cardContainer.append(feelsLike);
+    var wind = $("<li>");
+    wind.text("Wind Gust: " + selectedData[index].wind.gust + " MPH");
+    cardContainer.append(wind);
+    var pressure = $("<li>");
+    pressure.text("Pressure: " + selectedData[index].main.pressure + " %");
+    cardContainer.append(pressure);
     forecastContainer.append(cardContainer);
   }
 };
@@ -101,11 +113,11 @@ var rendorSave = function (saveCity) {
   var newButton = $("<button>");
   newButton.text(saveCity);
   newButton.on("click", function (event) {
-    var grabCityText = event.target.textContent
+    var grabCityText = event.target.textContent;
     getSearchValue(grabCityText);
     getCurrentCity(grabCityText);
-  })
+  });
   saveButton.append(newButton);
-}
+};
 
 weatherForm.on("submit", formSubmit);
