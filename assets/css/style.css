@@ -10,7 +10,7 @@
 
 header {
   text-align: center;
-  background-image: url('../images/lightening.jpg');
+  background-image: url("../images/lightening.jpg");
   padding: 100px;
 }
 
@@ -30,7 +30,7 @@ main {
   color: bold var(--dark);
 }
 
-.card{
+.card {
   background-color: transparent;
   border: 1px solid var(--white);
 }
@@ -51,7 +51,7 @@ li {
   display: block;
   background-color: transparent;
 }
-::placeholder{
+::placeholder {
   color: var(--white);
   opacity: 1;
   font-weight: 400;
@@ -70,14 +70,15 @@ li {
   border: solid 1px var(--white);
   width: 50%;
 }
-.button:hover{
+.button:hover {
   background-color: gray;
 }
 
 .current-weather {
   background-color: transparent;
 }
-.col{
+
+.col {
   margin-right: -200px;
 }
 .forecast {
@@ -93,6 +94,7 @@ li {
 .right {
   width: 70%;
   padding: 0px 30px;
+  text-decoration: underline;
 }
 
 .forecast-card {
@@ -116,6 +118,62 @@ li {
   width: 50%;
 }
 
-#saved-weather button:hover{
+#saved-weather button:hover {
   background-color: gray;
+}
+
+@media screen and (max-width: 1200px) {
+  .col {
+    margin-right: 0;
+  }
+  .forecast {
+    flex-direction: column;
+    align-items: center;
+  }
+  .left,
+  .right {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .forecast-card {
+    margin-bottom: 20px;
+  }
+}
+@media screen and (max-width: 768px) {
+  /* Adjust styles for smaller screens, including iPhones */
+  header {
+    padding: 50px; /* Reduce header padding for smaller screens */
+  }
+
+  main {
+    margin: 10px auto; /* Adjust main margin for smaller screens */
+  }
+
+  .col {
+    margin-right: 0; /* Remove negative margin for smaller screens */
+  }
+
+  .forecast {
+    flex-direction: column; /* Stack forecast cards vertically */
+    align-items: center; /* Center forecast cards on smaller screens */
+  }
+
+  .left,
+  .right {
+    width: 100%; /* Full width for both columns on smaller screens */
+    padding: 0 15px; /* Add padding to columns for spacing */
+  }
+
+  .forecast-card {
+    /* Adjust forecast card styles for stacked layout */
+    margin-bottom: 20px; /* Add spacing between forecast cards */
+  }
+
+  .button {
+    font-size: 9px;
+  }
+  #saved-weather button {
+    /* Adjust saved weather button styles for smaller screens */
+    font-size: 10px;
+  }
 }
